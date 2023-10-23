@@ -100,7 +100,7 @@ public class DistanceHistory {
             stepMap.putString("day", "1970-01-01");
             stepMap.putDouble("startDate", 0);
             stepMap.putDouble("endDate", 0);
-            stepMap.putDouble("calorie", 0);
+            stepMap.putDouble("distance", 0);
             stepMap.putBoolean("wasManuallyEntered", false);
             map.pushMap(stepMap);
             return;
