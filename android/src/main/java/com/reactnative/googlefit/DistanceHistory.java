@@ -96,6 +96,15 @@ public class DistanceHistory {
 
         WritableMap stepMap = Arguments.createMap();
         stepMap.putString("dataSourceId", dataSet.getDataSource().getStreamIdentifier());
+        if (dataSet.getDataPoints().isEmpty()) {
+            stepMap.putString("day", "1970-01-01");
+            stepMap.putDouble("startDate", 0);
+            stepMap.putDouble("endDate", 0);
+            stepMap.putDouble("calorie", 0);
+            stepMap.putBoolean("wasManuallyEntered", false);
+            map.pushMap(stepMap);
+            return;
+        }
 
         for (DataPoint dp : dataSet.getDataPoints()) {
             Log.i(TAG, "Data point:");
