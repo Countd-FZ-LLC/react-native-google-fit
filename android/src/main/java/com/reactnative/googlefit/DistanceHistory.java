@@ -95,7 +95,7 @@ public class DistanceHistory {
         Format formatter = new SimpleDateFormat("EEE");
 
         WritableMap stepMap = Arguments.createMap();
-
+        stepMap.putString("dataSourceId", dataSet.getDataSource().getStreamIdentifier());
 
         for (DataPoint dp : dataSet.getDataPoints()) {
             Log.i(TAG, "Data point:");

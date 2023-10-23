@@ -324,6 +324,7 @@ declare module 'react-native-google-fit' {
     startDate: string,
     day: Day,
     wasManuallyEntered: boolean;
+    dataSourceId: string,
   };
 
   export type DistanceResponse = {
@@ -331,6 +332,7 @@ declare module 'react-native-google-fit' {
     endDate: string,
     startDate: string,
     day: Day
+    dataSourceId: string,
   };
 
   export type HeartRateResponse = {
