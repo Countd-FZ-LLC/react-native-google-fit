@@ -188,6 +188,7 @@ class RNGoogleFit {
           (dev.source.stream ? ':' + dev.source.stream : '')
         obj.steps = buildDailySteps(dev.steps)
         obj.rawSteps = dev.steps
+        obj.dataSourceId = dev.source.id
         return obj
       }, this);
     }else{
