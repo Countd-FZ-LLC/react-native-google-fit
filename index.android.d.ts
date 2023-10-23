@@ -312,6 +312,7 @@ declare module 'react-native-google-fit' {
   } & DeviceInfo;
 
   export type StepsResponse = {
+    dataSourceId: string,
     source: string,
     steps: Array<{date: string, value: number }>,
     rawSteps: RawStep[]
